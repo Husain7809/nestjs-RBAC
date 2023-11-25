@@ -1,10 +1,7 @@
-import { Permission } from 'src/api/permission/entities/permission.entity';
 import {
   Column,
   CreateDateColumn,
   Entity,
-  JoinColumn,
-  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';

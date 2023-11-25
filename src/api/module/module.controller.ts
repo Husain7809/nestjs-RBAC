@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { ModuleService } from './module.service';
-import { ApiBearerAuth, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { CreateModuleDto } from './dto/create-module';
 import { BaseResponseDto } from 'src/helper/base-response.dto';
 

@@ -26,19 +26,22 @@ export class PermissionService {
           HttpStatus.BAD_REQUEST,
         );
       }
-  
+
       const data = await this.permissionRepository.save({
         name: body.name.toLocaleLowerCase(),
         module: { id: body.module },
       });
-  
+
       return {
         statusCode: HttpStatus.CREATED,
         message: message.PERMISSION_CREATED,
-        data
+        data,
       };
     } catch (error) {
-      throw new HttpException(error.message, error.status || HttpStatus.INTERNAL_SERVER_ERROR);
+      throw new HttpException(
+        error.message,
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
     }
   }
 }
