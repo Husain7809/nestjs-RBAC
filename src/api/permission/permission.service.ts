@@ -17,7 +17,7 @@ export class PermissionService {
       const isExist = await this.permissionRepository.count({
         where: {
           name: body.name.toLocaleLowerCase(),
-          module: { id: body.module },
+          // module: { id: body.module },
         },
       });
       if (isExist != 0) {
@@ -29,7 +29,7 @@ export class PermissionService {
 
       const data = await this.permissionRepository.save({
         name: body.name.toLocaleLowerCase(),
-        module: { id: body.module },
+        // module: { id: body.module },
       });
 
       return {

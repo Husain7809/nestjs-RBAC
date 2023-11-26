@@ -4,6 +4,7 @@ import { typeOrmConfig } from './config/mysql.config';
 import { AdminModule } from './api/admin/admin.module';
 import { ModuleModule } from './api/module/module.module';
 import { PermissionModule } from './api/permission/permission.module';
+import { RoleModule } from './api/role/role.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { PermissionModule } from './api/permission/permission.module';
     AdminModule,
     ModuleModule,
     PermissionModule,
+    RoleModule,
   ],
 })
 export class AppModule {}

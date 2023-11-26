@@ -6,7 +6,7 @@ export class CreatePermissionDto {
   @ApiProperty({ example: 'Read' })
   name: string;
 
-  @IsNotEmpty()
-  @ApiProperty({ example: 1 })
-  module: number;
+  // @IsNotEmpty()
+  // @ApiProperty({ example: 1 })
+  // module: number;
 }

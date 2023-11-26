@@ -1,10 +1,10 @@
-import { Modules } from 'src/api/module/entities/module.entity';
+// import { Modules } from 'src/api/module/entities/module.entity';
 import {
   Column,
   CreateDateColumn,
   Entity,
-  JoinColumn,
-  ManyToOne,
+  // JoinColumn,
+  // ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -17,12 +17,12 @@ export class Permission {
   @Column()
   name: string;
 
-  @ManyToOne(() => Modules, (module) => module.id, {
-    onDelete: 'CASCADE',
-    onUpdate: 'CASCADE',
-  })
-  @JoinColumn({ name: 'module_id', referencedColumnName: 'id' })
-  module: Modules;
+  // @ManyToOne(() => Modules, (module) => module.id, {
+  //   onDelete: 'CASCADE',
+  //   onUpdate: 'CASCADE',
+  // })
+  // @JoinColumn({ name: 'module_id', referencedColumnName: 'id' })
+  // module: Modules;
 
   @Column({ default: true })
   is_active: boolean;
