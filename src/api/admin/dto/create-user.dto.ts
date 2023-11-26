@@ -19,10 +19,6 @@ export class CreateUserDto {
   email: string;
 
   @IsNotEmpty()
-  @ApiProperty({ example: 'Test@123' })
-  password: string;
-
-  @IsNotEmpty()
   @ApiProperty({ example: '1' })
   role: number;
 }
